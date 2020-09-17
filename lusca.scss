@@ -1,0 +1,554 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+
+$vermelho: #C80F0E;
+$preto: #000;
+$branco: #fff;
+$azul: #1400FF;
+$roxo: #CC1DD0;
+
+body{
+    background: $preto;
+}
+
+// Inicio header
+.header{
+    position: fixed;
+    width: 100%;
+    background: $preto;
+    z-index: 5;
+    &-nav{
+        // background-color: $preto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-text{
+            color: $branco;
+            margin: 0 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 5px 20px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            &:hover{
+                background-color: $branco;
+                color: $preto;
+                border-radius: 20px;
+                transition: 0.5s;
+
+            }
+        }
+        &-img{
+            margin: 0 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+// Inicio main
+#mainScroll{
+    position: absolute;
+    top: 0;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    
+    &-social{
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        &-icon{
+            width: 45px;
+            margin: 0 5px;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.4);
+            }
+        }
+        &:after{
+            content: "______________________";
+            color: white;
+            letter-spacing: -1px;
+            position: relative;
+            bottom: 20px;
+            margin-left: 10px;
+        }
+    }
+    &-title{
+        font-size: 50px;
+        color: $branco;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        bottom: 50px;
+        cursor: default;
+
+    }
+    &-subtitle{
+        font-size: 20px;
+        color: $branco;
+        position: relative;
+        bottom: 20px;
+        cursor: default;
+        &::after{
+            content: "|";
+            margin-left: 5px;
+            opacity: 1;
+            color: $branco;
+            animation: piscar .7s infinite;
+        }
+        
+    }
+}
+
+
+//Inicio conteudo
+.sobre, .exp, .proj, .ctto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 75px;
+    &-scroll{
+        position: relative;
+        bottom: 100px;
+    }   
+    &-title{
+        color: $branco;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        cursor: default;
+        &:hover{
+            letter-spacing: 10px;
+        }
+    }
+    &-icon{
+        margin-bottom: 10px;
+        width: 50px;
+    }
+    &-text{
+        color: $branco;
+        text-align: center;
+        line-height: 25px;
+        margin: 25px 0;
+    }
+    .sobre-skill-html, .sobre-skill-css, .sobre-skill-js, .sobre-skill-csgo{ 
+        
+        &-text{
+            display: flex;
+            justify-content: space-between;
+
+            &-title{
+                letter-spacing: 1px;
+                color: $branco;
+            }
+            
+            &-percent{
+                // position: absolute;
+                // top: 0;
+                // right: 0;
+                color: $branco;
+            }
+        }
+        
+        &-bar{
+            border-radius: 10px;
+            width: 50vw;
+            background: #80808052;
+            margin-top: 10px;
+            
+            &-value{
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,0,255,0.5) 0%, rgba(204,29,208,1) 83%);
+                padding-left: 10px;
+                border-radius: 10px;
+                height: 10px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    
+    // carrossel de projetos
+    &-carousel{
+        display: block !important;
+        width: 50%;
+        text-align: -webkit-center;
+        align-items: center;
+        .slick-prev{
+            font-size: 0;
+            background: url(../imgs/icon-setaE.png) no-repeat;
+            background-position: center;
+            height: 65px;
+            width: 50px;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+            position: absolute;
+            left: 0;
+            bottom: 30%;
+            outline: none;
+            z-index: 1;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        .slick-next{
+            font-size: 0;
+            background: url(../imgs/icon-setaD.png) no-repeat;
+            background-position: center;
+            height: 65px;
+            width: 50px;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+            position: absolute;
+            right: 0;
+            bottom: 30%;
+            outline: none;
+            z-index: 1;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+        &-slide{
+            outline: none;
+            text-align: -webkit-center;
+            &-img{
+                height: 200px;
+                width: 325px;
+            }
+            &-title{
+                color: $branco;
+                letter-spacing: 5px;
+                font-size: 25px;
+                margin: 15px 0;
+                font-weight: 300;
+            }
+            &-description, &-date{
+                color: $branco;
+                letter-spacing: 3px;
+                font-size: 15px;
+                font-weight: 300;
+                padding: 0 24% 5% 24%; 
+                line-height: 20px;  
+                text-align: center;   
+            }
+            
+            &-link{
+                margin-top: 15px;
+                border: 1px solid $branco;
+                background: $branco;
+                padding: 4px 10px;
+                border-radius: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: 0.5s;
+                position: relative;
+                top: 15px;
+                color: $preto;
+                font-weight: 500;
+                outline: none;
+                text-decoration-line: none;
+                cursor: pointer;
+                
+                &:hover{
+                    letter-spacing: 3px;
+                    color: $branco;
+                    background: $preto;
+                }
+            }
+            &-href{
+                display: flex;
+                justify-content: center;
+                &-img{
+                    width: 340px;
+                    background: white;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    //formulário de contato
+    &-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-item{
+            width: 350px;
+            padding: 5px 0 5px 5px;
+            margin: 10px 0;
+            border: none;
+            &-msg{
+                width: 350px;
+                padding-left: 5px;
+                height: 75px;
+                margin-bottom: 25px;
+            }
+            &-button{
+                padding: 5px 15px;
+                background: $branco;
+                border: 1px solid $branco;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: 0.5s;
+                font-weight: 600;
+                
+                &:hover{
+                    letter-spacing: 5px;
+                    color: $branco;
+                    background: $preto;
+                    
+                }
+            }
+        }
+    }
+}
+
+//scrolTop
+.scrolTop{
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+    background: black;
+    border-radius: 20px;
+    
+    &-img{
+        transition: 0.5s;
+        transform: rotate(90deg);
+        width: 40px;
+    }
+}
+
+//Inicio footer
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 75px;
+    background: #101010;
+    &-text{
+        color: $branco;
+        font-size: 10px;
+        &-link{
+            color: $branco;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+}
+
+.emailFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 75px;
+    background: #101010;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    &-text{
+        color: $branco;
+        font-size: 10px;
+        &-link{
+            color: $branco;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+}
+
+// scroll bar
+::-webkit-scrollbar {
+    width: 6px;
+    &-track{
+        background: $preto; 
+    }
+    &-thumb{
+        background: $branco;
+        transition: 1.5s;
+        border-radius: 20px;
+    }
+}
+
+// confirmação de email enviado
+.confirmed, .denied{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30%;
+    width: 100%;
+    &.is--active{
+        display: flex !important;
+    }
+
+    &-img{
+        width: 50px;
+        margin-bottom: 25px;
+    }
+    &-title{
+        color: $branco;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
+    &-text{
+        color: $branco;
+        font-weight: 100;
+        margin-bottom: 25px;
+    }
+    &-button{
+        color: $branco;
+        text-decoration: none;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 5px 20px;
+        letter-spacing: 1px;
+        transition: 0.5s;
+        text-transform: uppercase;
+
+        &:hover{
+            color: $preto;
+            background: $branco;
+            letter-spacing: 3px;
+
+        }
+    }
+}
+
+//inicio mobile
+@media screen and (max-width: 414px) {
+    .header{
+        display: none !important;
+    }
+    .headerMob{
+        display: block !important;
+        align-items: center;
+        position: fixed;
+        background: #000;
+        z-index: 5;
+        width: 100%;
+        &-nav{
+            &-text{
+                color: $branco;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin: 5px 0;
+            }
+        }
+
+        &-menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3.5%;
+            &-icon{
+                width: 40px;
+            }
+            &-img{
+                width: 200px;
+            }
+        }
+
+        #mobNav{
+            display: none;
+            flex-direction: column;
+            padding: 5px 15px;
+            background: #101010;
+            &.is--active{
+                display: flex;
+            }
+
+        }   
+    }
+    .main-social{
+        display: none !important;
+    }
+    .main-socialMob{
+        display: block !important;
+        position: absolute;
+        bottom: 10px;
+
+        &:before{
+            content: "____________";
+            color: white;
+            letter-spacing: -1px;
+            position: relative;
+            bottom: 20px;
+        }
+        &-icon{
+            width: 45px;
+            margin: 0 5px;
+        }
+        &:after{
+            content: "____________";
+            color: white;
+            letter-spacing: -1px;
+            position: relative;
+            bottom: 20px;
+        }
+    }
+    
+    
+    
+
+    .main-title{
+        font-size: 2.5em;
+    }
+    
+    .sobre, .exp, .proj, .ctto{
+        &-text{
+            margin: 5%;
+
+        }
+        &-carousel{
+            width: 90%;
+            &-slide-description{
+                padding: 0px 12% 20px 12%;
+            }
+        }
+        
+        .sobre-skill-html, .sobre-skill-css, .sobre-skill-js, .sobre-skill-csgo{
+            &-bar{
+                width: 90vw;
+            }
+        }
+    }
+}
+@keyframes piscar {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

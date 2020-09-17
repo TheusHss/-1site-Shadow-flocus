@@ -1,0 +1,294 @@
+    #headerone {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 74px;
+        color: blue;
+        background-color: white;
+    }
+
+    #header2{
+        color: black;
+    background: black;
+    margin: auto;
+    height: 27px;
+    }
+    #pesq{
+        outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.555) ;
+    border-radius: 20px;
+    border-color: rgb(0, 140, 255);
+    }
+.pesq1{
+    width: 25px;
+    position: relative;
+    right: 30px;
+}
+#pesqq{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+    ::-webkit-input-placeholder {
+        color: rgb(0, 0, 0);
+      letter-spacing: 5px;
+      font-size:12px;
+     }
+    p {
+        font-size: 24px;
+        color: red;
+    }
+    p:hover{
+        cursor: default;
+    }
+    
+    .gato {
+        width: 71px;
+        transition: 1s;
+    }
+    
+    .gato:hover {
+     
+        transform: scale(2);
+        transition: 1s;
+        
+    }
+    /* #guias{
+        top: 200px;
+        height: 150px;
+        display: flex;
+        position: absolute;
+        transition: 1s;
+    }
+   
+    #guias1{
+        transition: 1s;
+        top: 200px;
+        left: 300px;
+        height: 150px;
+        display: flex;
+        position: absolute;
+    }
+    #guias2{
+        transition: 1s;
+        top: 200px;
+        left: 600px;
+        height: 150px;
+        display: flex;
+        position: absolute;
+    }
+    #guias3{
+        top: 200px;
+        left: 900px;
+        height: 150px;
+        display: flex;
+        position: absolute;
+        transition: 1s;
+    }
+    #guias:hover{
+        cursor: pointer;
+        height: 259px;
+         transition: 1s;
+         }
+         #guias1:hover{
+            cursor: pointer;
+            height: 259px;
+             transition: 1s;
+             }
+             #guias2:hover{
+                cursor: pointer;
+                height: 259px;
+                 transition: 1s;
+                 }
+                           
+    #guias3:hover{
+   cursor: pointer;
+   height: 259px;
+    transition: 1s;
+    } */
+
+    
+   
+    h1:hover{
+        cursor: default;
+    }
+    
+    ul {
+        display: flex;
+    }
+    
+    li {
+        color: blue;
+        list-style-type: none;
+        margin: 10px 10px 10px 10px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    #sair{color: blue;
+        list-style-type: none;
+        margin: 10px 10px 10px 10px;
+        font-weight: 700;
+        cursor: pointer;}
+        #sair:hover{
+            color: red;
+        }
+    li:hover {
+        color: red;
+    }
+    footer{   background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #by{
+        font-size: 24px;
+        animation: h2 0.4s infinite;
+        color: blue;
+    }
+    #by:hover{
+        cursor: default;
+    }
+    #by2{
+        animation:aa 0.4s infinite;
+    }
+    @keyframes aa{
+        from{color: blue;}
+        to {color: white;}
+
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+    }
+    
+    .susto {
+        top: 20px;
+        left: 0px;
+        width: 69px;
+        position: absolute;
+    }
+    
+    .susto:hover {
+        width: 100%;
+    }
+    .shadow{
+        width: 100%;
+        
+    }
+    .gato-2 {
+        position: absolute ;
+        width: 100%;
+    }
+    
+    h2 {
+        font-size: 300%;
+    position: absolute;
+    top: 103px;
+    left: 0;
+    color: red;
+    animation-name:h2;
+    animation: h2 0.4s infinite;
+    }
+    h2:hover{
+        cursor: default;
+    }
+    @keyframes h2{
+        from{color: red;}
+        to {color: white;}
+    }
+    
+    
+    div {
+        transition: 1s;
+        opacity: 1;
+    }
+    
+    .sumir {
+        transition: 1s;
+        opacity: 0;
+    
+}
+
+
+    #golf {
+        font-size: 15px;
+        color: black;
+        background-color: blue;
+        border: 5px dotted;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+        transition: 1s;
+    }
+    
+    #golf:hover {
+        letter-spacing: 20px;
+        transition: 1s;
+        /* transform: scale(20); */
+        color: blue;
+        background-color: black;
+    }
+    
+    #F {
+        font-size: 15px;
+        color: black;
+        background-color: red;
+        border: 5px dotted;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+        transition: 1s;
+    }
+    
+    #F:hover {
+        color: blue;
+        background-color: black;
+        transition: 1s;
+        letter-spacing: 20px;
+        border-radius: 50px;
+    }
+    #n{
+        color: blue;
+        background: black;
+        position: absolute;
+        top: -2px;
+        left: 0;
+        font-size: large;
+        font-family: fantasy;
+        transition: 1s;
+        animation-name: nometwo;
+        animation: nometwo 5s infinite;
+   
+    }
+    #n:hover{
+         cursor: default;
+    }
+    
+@keyframes nometwo {
+    10%{color: red;;}
+        20%{color: blue;
+            background:black;}
+        30%{color: red;;}
+        40%{color: blue;
+            background:black;}
+        50%{color: red;;}
+        60%{color: blue;
+            background:black;}
+        70%{color: red;;}
+        80%{color: blue;
+            background:black;}
+        90%{color: red;}
+        100%{color: blue}
+
+        from {left: 170px;}
+        to {left: 70%;}
+        
+     }
+     #table1{
+        
+position: static;
+     }
